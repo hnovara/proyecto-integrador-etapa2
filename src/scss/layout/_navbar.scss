@@ -1,0 +1,16 @@
+.navbar__container {
+    align-items: center;
+    background-color: $secondary-color;
+    display: flex;
+    height: $navbar-height;
+    justify-content: space-between;
+    padding: 0 10%;
+
+    a {
+        font-size: $font-size-lg;
+        text-decoration: none;
+        &:hover {
+            color: $success-color;
+        }
+    }
+}

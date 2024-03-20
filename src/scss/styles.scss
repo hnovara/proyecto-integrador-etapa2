@@ -1,1 +1,36 @@
-@import "/src/scss/base/base"
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+/* https://coolors.co/02111b-577399-bdd5ea-f7f7ff-fe5f55 */
+
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/helpers";
+@import "./utils/animations";
+
+// Vendors
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./layout/header-container";
+@import "./layout/main-container";
+@import "./layout/footer-container";
+@import "./layout/navbar";
+
+@import "./components/button";
+@import "./components/card";
+@import "./components/cart";
+@import "./components/counter";
+@import "./components/fieldset";
+@import "./components/form";
+@import "./components/icon";
+@import "./components/iframe";
+@import "./components/img";
+@import "./components/input";
+@import "./components/label";
+@import "./components/textarea";
+
+
+
+// Pages
+// Themes
+

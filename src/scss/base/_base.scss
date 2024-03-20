@@ -1,0 +1,27 @@
+html {
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+h1 {
+    color: lighten($color: $secondary-color, $amount: 20);
+    font-size: $font-size-xxl;
+}
+h3 {
+    font-size: $font-size-lg;
+}
+a {
+    color: $secondary-color;
+    font-size: $font-size-lg;
+}
+p {
+    color: $primary-color;
+    font-size: $font-size-md;
+}
+
+// $font-size-md
+// $font-size-lg
+// $font-size-xl
+// $font-size-xxl

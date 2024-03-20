@@ -1,0 +1,45 @@
+input {
+    background-color: lighten($color: $success-color, $amount: 30);
+    border-radius: 0.25rem;
+    color: $primary-color;
+    padding: 0.4rem;
+    width: 24rem;
+}
+.b-photo {
+    background-color: transparent;
+}
+.i-search {
+    width: 15rem;
+    background-color: #EFEFEF;
+    &:hover {
+        background-color: #efefeff5;
+    }
+}
+.input-msg-error {
+    display: none;
+    color: $error-color;
+}
+input:focus {
+    background-color: $secondary-color;
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+    input{
+        width: 20rem;
+    }
+}
+@media (min-width: 620px) and (max-width: 900px) {
+    input{
+        width: 32rem;
+    }
+    .in-shortDes {
+        width: 32rem;
+    }
+}
+@media (max-width: 620px) {
+    input{
+        width: 16rem;
+    }
+    .in-shortDes {
+        width: 16rem;
+    }
+}
