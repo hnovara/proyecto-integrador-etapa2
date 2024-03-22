@@ -4,6 +4,8 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
+    padding-top: $navbar-height;
+    padding-bottom: $footer-height;
 }
 h1 {
     color: lighten($color: $secondary-color, $amount: 20);

@@ -13,8 +13,10 @@
 
 @import "./layout/header-container";
 @import "./layout/main-container";
-@import "./layout/footer-container";
+@import "./layout/footer";
 @import "./layout/navbar";
+
+@import "./pages/contact";
 
 @import "./components/button";
 @import "./components/card";
@@ -28,6 +30,7 @@
 @import "./components/input";
 @import "./components/label";
 @import "./components/textarea";
+@import "./components/socialmedia";
 
 
 
