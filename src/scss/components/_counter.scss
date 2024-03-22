@@ -7,6 +7,7 @@
     .counter__count-text {
         margin: 0 2rem;
         font-size: 1.5rem;
+        color: black;
     }
       
     .counter__btn {
@@ -17,6 +18,7 @@
         height: 2rem;
         padding: 0.25rem;
         width: 2rem;
+        color: black;
 
         &:disabled {
             background-color: darken($color:$secondary-color, $amount: 20);

@@ -10,6 +10,7 @@
     a {
         font-size: $font-size-lg;
         text-decoration: none;
+        color: black;
         &:hover {
             color: $success-color;
         }
