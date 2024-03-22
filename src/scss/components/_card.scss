@@ -15,13 +15,17 @@
         text-align: start;
         width: 20%;
         .card__data {
-            padding: 1rem;
+            padding: 0.5rem;
         }
         img {
+            border-radius: 0.75rem 0.75rem 0 0;
             width: 100%;
         }
         h2 {
             padding-top: 0;
+        }
+        p {
+            color: black;
         }
     }
 }
