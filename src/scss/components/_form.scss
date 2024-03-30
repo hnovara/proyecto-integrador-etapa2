@@ -1,58 +1,17 @@
-.form-control[aria-invalid="true"] {
-    outline: 2px solid $error-color;
-}
-.info-container {
-    height: 6rem;
-    text-align: center;
-    p {
-        margin: 0.2rem;
-        font-weight: bold;
-    }
-}
-.info-container-textarea-alta {
-    height: 18.25rem;
-    text-align: center;
-    p {
-        margin: 0.2rem;
-        font-weight: bold;
-    }
-}
-.info-container-textarea {
-    height: 12.5rem;
-    text-align: center;
-    p {
-        margin: 0.2rem;
-        font-weight: bold;
-    }
-}
-.info-container-check {
-    height: 6rem;
-    text-align: center;
-    p {
-        margin: 0.2rem;
-        font-weight: bold;
-    }
-}
-.info-container-photo {
-    background-color: transparent;
-}
-@media (min-width: 1300px) and (max-width: 5000px) {
-    .info-container {
-        width: 30rem;
-    }
-    .info-container-textarea-alta {
-        width: 30rem;
-    }
-    .info-container-textarea {
-        width: 30rem;
-    }
-    .info-container-check {
-        width: 30rem;
-    }
-}
-@media (max-width: 900px) {
-    .info-container-photo {
-        background-color: transparent;
-        width: 62%;
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .form__button-submit {
+        background-color: $success-color;
+        border: none;
+        border-radius: 0.25rem;
+        color: black;
+        font-size: $font-size-md;
+        padding: 0.5rem;
+        &:disabled {
+            background-color: $error-color;
+        }
     }
 }
