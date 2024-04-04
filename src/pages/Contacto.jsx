@@ -38,7 +38,10 @@ function Contacto() {
     return (
         <div className='contact__container'>
             <Banner/>
-            <div className='contact__container__sec'>
+            <div className='contact__container__sec'
+                style={{ 
+                backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo-toys.jpg)` 
+                }}>
                 <Text renderAs="h2" content="Contacto"/>
                 <Form 
                     onSubmit={() => {
