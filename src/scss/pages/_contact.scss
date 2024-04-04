@@ -1,9 +1,6 @@
 .contact__container {
-    margin: 0 10%;
-    @media (min-width: 600px) {
-        width: 50%;
-    }
-    @media (min-width: 1200px) {
-        width: 35%;
+    width: 100%;
+    .contact__container__sec {
+        margin: 0 10%;
     }
 }
