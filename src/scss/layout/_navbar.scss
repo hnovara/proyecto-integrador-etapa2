@@ -22,6 +22,7 @@
         font-weight: 600;
         text-decoration: none;
         padding: 0 1.4rem;
+        color: $secondary-color;
         &:first-child {
             color: lighten($color: $secondary-color, $amount: 20);
             font-family: 'Martel', serif;
