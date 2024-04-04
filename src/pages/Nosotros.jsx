@@ -1,9 +1,15 @@
-import ProductsWrapper from "../components/ProductsWrapper";
+import React from 'react';
+import Banner from '../components/Banner';
+import Mapa from '../components/Map';
 
 function Nosotros() {
+
     return (
-        <ProductsWrapper />
-        )
+        <div className='nosotros__container'>
+            <Banner/>
+            <Mapa/> 
+        </div>
+    );
 }
 
-export default Nosotros
+export default Nosotros;
