@@ -1,9 +1,20 @@
+import React, { useState, useEffect } from 'react';
 import ProductsWrapper from "../components/ProductsWrapper";
+import Search from "../components/Searchy";
 
 function Home() {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearch = (searchTerm) => {
+        setSearchTerm(searchTerm);
+    };
+
     return (
-        <ProductsWrapper />
-    )
+        <div>
+            <Search onSearch={handleSearch} />
+            <ProductsWrapper searchTerm={searchTerm} /> 
+        </div>
+    );
 }
 
-export default Home
+export default Home;
