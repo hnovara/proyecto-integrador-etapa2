@@ -5,9 +5,12 @@ function Footer() {
     return (
         <footer className='footer__container'>
             <div className='footer__wrapper'>
-                <h2>Tienda online</h2>
+                <div>
+                    <p><b>Juguetería Cósmica</b></p>
+                    <p>Teléfono: (11) 5809-7999</p>
+                    <p>hola@jugueteria-cosmica.com</p>
+                </div>
                 <SocialMedia />
-                <p>Copyrigth - 2024</p>
             </div>
         </footer>
     )

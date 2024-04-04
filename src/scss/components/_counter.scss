@@ -21,7 +21,9 @@
         color: black;
 
         &:disabled {
-            background-color: $success-color
+            background-color: $success-color;
+            color: lighten($secondary-color, 90%);
+            border-color: lighten($secondary-color, 90%);
         }
         &:hover:not([disabled]) {
             background-color: $secondary-color;

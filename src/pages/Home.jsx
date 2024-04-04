@@ -11,7 +11,7 @@ function Home() {
       };
 
     return (
-        <div>
+        <div className='home__container'>
             <Banner/>
             <Search onSearch={handleSearch} />
             <ProductsWrapper searchTerm={searchTerm} /> 
