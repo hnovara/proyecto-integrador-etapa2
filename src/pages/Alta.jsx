@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Text from '../components/Text'
 import Form from '../components/Form'
+import Banner from '../components/Banner';
 import InputGroup from '../components/InputGroup'
 
 import { useForm } from "../hooks/useForm";
@@ -19,51 +20,83 @@ function Alta() {
     
     const inputProps = {
         name: {
-            inputLabel: "Nombre y apellido",
+            inputLabel: "Nombre",
         },
-        email: {
-            inputLabel: "Correo electrónico",
-            inputType: "email"
+        price: {
+            inputLabel: "Precio",
+            inputType: "number"
         },
-        subject: {
-            inputLabel: "Asunto",
+        stock: {
+            inputLabel: "Stock",
+            inputType: "number"
         },
-        body: {
-            inputLabel: "Mensaje",
+        category: {
+            inputLabel: "Categoría",
+        },
+        brand: {
+            inputLabel: "Marca",
+        },
+        ageFrom: {
+            inputLabel: "Edad desde",
+            inputType: "number"
+        },
+        ageTo: {
+            inputLabel: "Edad hasta",
+            inputType: "number"
+        },
+        shortDesc: {
+            inputLabel: "Descripción corta",
+        },
+        longDesc: {
+            inputLabel: "Descripción larga",
             inputType: "textarea"
-        }
+        },
+        img: {
+            inputLabel: "Foto",
+            inputType: "file"
+        },
+        delivery: {
+            inputLabel: "Envío sin cargo",
+            inputType: "checkbox"
+        },
     }
 
     return (
         <div className='contact__container'>
-            <Text renderAs="h2" content="Envíanos un mensaje"/>
-            <Form 
-                onSubmit={() => {
-                    setLoadingForm(true)
-                    postMessage(values)
-                        .then( data => console.log(data))
-                        .catch( err => console.error(err))
-                        .finally( () => {
-                            setLoadingForm(false)
-                            resetForm()})
-                }}
-                labelButton="Enviar mensaje"
-                loading={loadingForm}
-            >
-                {
-                    Object.entries(inputProps)
-                        .map(
-                            ([key, props]) =>
-                                <InputGroup
-                                    key={key}
-                                    id={key}
-                                    onChange={handleInputChange}
-                                    values={values}
-                                    {...props}
-                                />
-                        )
-                }
-            </Form>
+            <Banner/>
+            <div className='contact__container__sec'
+                style={{ 
+                backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo-toys.jpg)` 
+                }}>
+                <Text renderAs="h2" content="Alta"/>
+                <Form 
+                    onSubmit={() => {
+                        setLoadingForm(true)
+                        postMessage(values)
+                            .then( data => console.log(data))
+                            .catch( err => console.error(err))
+                            .finally( () => {
+                                setLoadingForm(false)
+                                resetForm()})
+                    }}
+                    labelButton="Enviar comentarios"
+                    loading={loadingForm}
+                    >
+                    {
+                        Object.entries(inputProps)
+                            .map(
+                                ([key, props]) =>
+                                    <InputGroup
+                                        key={key}
+                                        id={key}
+                                        onChange={handleInputChange}
+                                        values={values}
+                                        {...props}
+                                    />
+                            )
+                    }
+                </Form>
+            </div>
         </div>
     )
 }
