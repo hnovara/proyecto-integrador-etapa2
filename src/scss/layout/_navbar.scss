@@ -1,5 +1,6 @@
 .navbar__container {
-    background-color: $secondary-color;
+    background-color: $primary-color;
+    border-bottom: 0.3rem solid $error-color;
     height: $navbar-height;
     position: fixed;
     top: 0;
@@ -15,20 +16,33 @@
             align-items: center;
         }
     }
-
     a {
         font-size: $font-size-md;
+        font-weight: 600;
         text-decoration: none;
-        color: black;
-        padding-right: 1rem;
+        padding: 0 1.4rem;
         &:first-child {
-            h1 {
-                font-size: $font-size-lg;
-                font-weight: 200;
-            }
+            color: lighten($color: $secondary-color, $amount: 20);
+            font-family: 'Martel', serif;
+            font-size: $font-size-xl;
+            padding-right: 4.2rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px silver; 
+            &:hover {
+            text-shadow: 4px 4px 8px silver;  
+            }   
+        }
+        &:active {
+            color: $error-color;
+            text-decoration: underline;
         }
         &:hover {
-            color: white;
+            color: lighten($color: $secondary-color, $amount: 20);
+            cursor: pointer;
+        }
+        &:link {
+            color: $success-color;
+            text-decoration: none;
         }
     }
 }

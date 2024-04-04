@@ -12,6 +12,7 @@ function Search({ onSearch }) {
   return (
     <div className="search-bar">
       <input
+        className="search-input"
         type="text"
         value={searchTerm}
         onChange={handleChange}

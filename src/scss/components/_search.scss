@@ -1,18 +1,21 @@
 .search-bar {
-    margin-bottom: 1rem;
+    margin: 0;
+    text-align: center;
   
-    &__input {
-      width: 100%;
+    .search-input {
       padding: 0.5rem;
       font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.25rem;
+      border: 1px solid $secondary-color;
       transition: border-color 0.15s ease-in-out;
-  
+      text-align: center;
+      width: 100%;
+      
       &:focus {
         outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        border-color: $error-color;
+      }
+      &:hover {
+          background-color: #efefeff5;
       }
     }
   }

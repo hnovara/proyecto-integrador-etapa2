@@ -7,10 +7,6 @@ body {
     padding-top: $navbar-height;
     padding-bottom: $footer-height;
 }
-h1 {
-    color: lighten($color: $secondary-color, $amount: 20);
-    font-size: $font-size-xxl;
-}
 h3 {
     font-size: $font-size-lg;
 }
@@ -27,3 +23,4 @@ p {
 // $font-size-lg
 // $font-size-xl
 // $font-size-xxl
+
