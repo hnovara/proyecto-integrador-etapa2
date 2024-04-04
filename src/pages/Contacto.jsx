@@ -53,7 +53,7 @@ function Contacto() {
                                 setLoadingForm(false)
                                 resetForm()})
                     }}
-                    labelButton="Enviar mensaje"
+                    labelButton="Enviar comentarios"
                     loading={loadingForm}
                     >
                     {

@@ -6,7 +6,7 @@ const Banner = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage % 3) + 1);
-    }, 6000);
+    }, 4000);
 
     return () => clearInterval(intervalId); 
   }, []);

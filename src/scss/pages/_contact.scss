@@ -17,5 +17,9 @@
         & h2 {
             text-align: center;
         }
+        & textarea {
+            min-height: 7rem;
+            resize: none;
+        }
     }
 }
