@@ -5,17 +5,17 @@
     .search-input {
       padding: 0.5rem;
       font-size: 1rem;
-      border: 1px solid $secondary-color;
+      border: 2px solid $success-color;
       transition: border-color 0.15s ease-in-out;
       text-align: center;
       width: 100%;
       
       &:focus {
         outline: none;
-        border-color: $error-color;
+        border: 2px solid $error-color;
       }
       &:hover {
-          background-color: #efefeff5;
+          background-color: #efefefd4;
       }
     }
   }
