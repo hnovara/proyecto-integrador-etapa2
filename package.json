@@ -1,6 +1,6 @@
 {
-  "name": "my-eit-ecommerce",
-  "version": "0.1.0",
+  "name": "proyecto-integrador-etap2",
+  "version": "2",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
