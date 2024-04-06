@@ -97,7 +97,7 @@ function Alta() {
             <div
                 className='contact__container__sec'
                 style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo-toys.jpg)`,
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo-toys2.jpg)`,
                 }}
             >
                 <Text renderAs='h2' content='Alta' />
