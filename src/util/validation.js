@@ -3,7 +3,6 @@ const validateStrings = (string) => {
     return regex.test(string);
 };
 
-// Función para validar la longitud de una cadena
 const validateStgLength = (stg, minLength, maxLength) => {
     if (stg.length < minLength) {
         return `El valor debe tener al menos ${minLength} caracteres.`;
@@ -14,17 +13,18 @@ const validateStgLength = (stg, minLength, maxLength) => {
     }
 };
 
-// Función para validar números positivos
+const validateEmails = (email) => {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+};
+
 const validatePositiveNumber = num => num >= 0;
 
-// Función para validar números enteros
 const validateInt = num => Number.isInteger(parseInt(num));
 
-// Función para validar el formulario
 function validarFormulario(values) {
     const errores = {};
 
-    // Validar longitud y contenido del campo nombre
     const nombreError = validateStgLength(values.name, 3, 50);
     if (nombreError !== true) {
         errores.name = nombreError;
@@ -32,7 +32,6 @@ function validarFormulario(values) {
         errores.name = 'El nombre solo puede contener letras y espacios';
     }
 
-    // Validar longitud y contenido del campo marca
     const brandError = validateStgLength(values.brand, 3, 50);
     if (brandError !== true) {
         errores.brand = brandError;
@@ -40,7 +39,6 @@ function validarFormulario(values) {
         errores.brand = 'La marca solo puede contener letras y espacios';
     }
 
-    // Validar longitud y contenido del campo categoría
     const categoryError = validateStgLength(values.category, 3, 50);
     if (categoryError !== true) {
         errores.category = categoryError;
@@ -48,38 +46,31 @@ function validarFormulario(values) {
         errores.category = 'La categoría solo puede contener letras y espacios';
     }
 
-    // Validar longitud del campo descripción corta
     const shortDescError = validateStgLength(values.shortDesc, 5, 100);
     if (shortDescError !== true) {
         errores.shortDesc = shortDescError;
     }
 
-    // Validar si el precio es un número positivo
     if (!validatePositiveNumber(values.price)) {
         errores.price = 'El precio debe ser un número positivo';
     }
 
-    // Validar si el stock es un número positivo
     if (!validatePositiveNumber(values.stock)) {
         errores.stock = 'El stock debe ser un número positivo';
     }
 
-    // Validar si la edad desde es un número entero
     if (!validateInt(values.ageFrom)) {
         errores.ageFrom = 'La edad desde debe ser un número entero';
     }
 
-    // Validar si la edad hasta es un número entero
     if (!validateInt(values.ageTo)) {
         errores.ageTo = 'La edad hasta debe ser un número entero';
     }
 
-    // Resto de validaciones...
 
     return errores;
 }
 
-// Función para mostrar alerta con los errores
 function mostrarErrores(errores, inputProps) {
     let mensaje = 'Por favor corrija los siguientes errores:\n\n';
     for (let key in errores) {
@@ -89,9 +80,8 @@ function mostrarErrores(errores, inputProps) {
     alert(mensaje);
 }
 
-// Función para mostrar alerta de producto cargado
 function mostrarProductoCargado() {
     alert('Producto cargado');
 }
 
-export { validarFormulario, mostrarErrores, mostrarProductoCargado };
+export { validarFormulario, mostrarErrores, mostrarProductoCargado, validateStgLength, validateStrings, validateEmails };
