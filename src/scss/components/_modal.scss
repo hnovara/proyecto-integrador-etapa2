@@ -13,6 +13,7 @@
         background-color: $white;
         border-radius: 1rem;
         height: 30rem;
+        overflow-y: auto;
         width: 50rem;
         .modal__header {
             display: flex;
@@ -26,5 +27,11 @@
                 margin: 1rem
             }
         }
+        &:focus {
+            outline: unset;
+        }
     }
 }
+
+
+

@@ -25,7 +25,14 @@ function Card({
             <div className="card__price">
                 $ {price}
             </div>
-            <Counter id={id}/>
+            <Counter 
+                id={id}
+                movieData={{
+                    name,
+                    img,
+                    category,
+                    brand,
+                }}/>
         </div>
     )
 }
