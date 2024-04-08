@@ -92,10 +92,10 @@ function Alta() {
     };
 
     return (
-        <div className='contact__container'>
+        <div className='alta__container'>
             <Banner />
             <div
-                className='contact__container__sec'
+                className='alta__container__sec'
                 style={{
                     backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo-toys2.jpg)`,
                 }}
