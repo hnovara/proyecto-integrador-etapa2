@@ -6,9 +6,7 @@ function CartItem({id, movieData, quantity}) {
         <div className='cart-item__container'>
             <h2>
                 {movieData.name}
-                <span>({movieData.brand})</span>
             </h2>
-            <p>{movieData.category}</p>
             <Counter 
                 id={id} 
                 movieData={movieData}
