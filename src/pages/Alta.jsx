@@ -4,7 +4,8 @@ import Form from '../components/Form';
 import Banner from '../components/Banner';
 import InputGroup from '../components/InputGroup';
 import { useForm } from '../hooks/useForm';
-import { postMessage } from '../util/api';
+// import { postMessage } from '../util/api';
+import { postProduct } from '../util/api';
 import { validarFormulario, mostrarErrores, mostrarProductoCargado } from '../util/validation';
 
 const INITIAL_STATE = {
@@ -30,7 +31,7 @@ function Alta() {
 
         if (Object.keys(errores).length === 0) {
             setLoadingForm(true);
-            postMessage(values)
+            postProduct(values)
                 .then(data => {
                     console.log(data);
                     mostrarProductoCargado();
